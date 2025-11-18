@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray800">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_item_cover"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:actualImageResource="@drawable/knife"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundedCornerRadius="12dp" />
+
+    <TextView
+        android:id="@+id/tv_item_musicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/sdv_item_cover"
+        app:layout_constraintTop_toTopOf="@+id/sdv_item_cover"
+        tools:text="I Wanna Go Home" />
+
+    <TextView
+        android:id="@+id/tv_item_bandName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/gray500"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/sdv_item_cover"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_musicName"
+        tools:text="The Last Knife Fighter" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_lottie"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/music_effect" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

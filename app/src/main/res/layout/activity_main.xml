@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray800"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_main_bandCover"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            app:actualImageResource="@drawable/knife"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundedCornerRadius="12dp" />
+
+
+        <TextView
+            android:id="@+id/tv_main_bandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/sdv_main_bandCover"
+            app:layout_constraintStart_toEndOf="@+id/sdv_main_bandCover"
+            app:layout_constraintTop_toTopOf="@+id/sdv_main_bandCover"
+            tools:text="The last knife fighter" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_main_musicCover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            app:actualImageResource="@drawable/knife"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main_bandName"
+            app:roundedCornerRadius="16dp"
+            app:viewAspectRatio="1" />
+
+        <TextView
+            android:id="@+id/tv_main_musicName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sdv_main_musicCover"
+            tools:text="I Wanna Go Home" />
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:value="40"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:haloColor="@color/white"
+            app:labelBehavior="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_main_musicName"
+            app:thumbColor="@color/white"
+            app:trackColorActive="@color/white"
+            app:trackColorInactive="@color/gray600" />
+
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/tv_time_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_main"
+            tools:text="02:35" />
+
+        <TextView
+            android:id="@+id/tv_time_length"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_main"
+            tools:text="05:19" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_play_pause"
+            android:layout_width="wrap_content"
+            app:maxImageSize="34dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/play_arrow_24px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider_main" />
+
+        <ImageView
+            android:id="@+id/iv_main_previous"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="42dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_play_pause"
+            app:layout_constraintEnd_toStartOf="@+id/fab_play_pause"
+            app:layout_constraintTop_toTopOf="@+id/fab_play_pause"
+            app:srcCompat="@drawable/skip_previous_24px"
+            app:tint="@color/gray500" />
+
+        <ImageView
+            android:id="@+id/iv_main_next"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="42dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fab_play_pause"
+            app:layout_constraintStart_toEndOf="@+id/fab_play_pause"
+            app:layout_constraintTop_toTopOf="@+id/fab_play_pause"
+            app:srcCompat="@drawable/skip_next_24px"
+            app:tint="@color/gray500" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="88dp"
+            android:text="@string/tv_title_playList"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_time_current" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="409dp"
+            android:layout_height="195dp"
+            android:layout_marginTop="12dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
