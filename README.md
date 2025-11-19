@@ -32,7 +32,7 @@ A simple Android music player app. You can play, pause, next, and previous songs
 ![First Screen](screenshots/1.jpg)
 
 ### Second Screen
-![Second Screen](screenshots/player.jpg)
+![Second Screen](screenshots/2.jpg)
 
 
  
