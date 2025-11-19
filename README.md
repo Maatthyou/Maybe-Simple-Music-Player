@@ -25,3 +25,14 @@ A simple Android music player app. You can play, pause, next, and previous songs
 1. Clone the repository:  
    ```bash
    git clone https://github.com/Maatthyou/Maybe-Simple-Music-Player
+---
+  ## Screenshots
+
+### First Screen
+![First Screen](screenshots/1.jpg)
+
+### Second Screen
+![Second Screen](screenshots/player.jpg)
+
+
+ 
