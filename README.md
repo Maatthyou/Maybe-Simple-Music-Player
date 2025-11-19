@@ -28,10 +28,10 @@ A simple Android music player app. You can play, pause, next, and previous songs
 ---
   ## Screenshots
 
-### First Screen
+### First Screenshot
 ![First Screenshot](screenshots/1.jpg)
 
-### Second Screen
+### Second Screenshot
 ![Second Screenshot](screenshots/2.jpg)
 
 
